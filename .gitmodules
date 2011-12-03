@@ -1,0 +1,6 @@
+[submodule "modules/compiler"]
+	path = modules/compiler
+	url = https://github.com/exoticorn/lace-module-compiler.git
+[submodule "modules/game-base"]
+	path = modules/game-base
+	url = https://github.com/exoticorn/lace-module-game-base.git

@@ -11,8 +11,8 @@ public:
 	
 	Vector2 operator+(const Vector2& o) const { return Vector2(x + o.x, y + o.y); }
 	Vector2 operator-(const Vector2& o) const { return Vector2(x - o.x, y - o.y); }
-	Vector2 operator+=(const Vector2& o) { x += o.x; y += o.y; }
-	Vector2 operator-=(const Vector2& o) { x -= o.x; y -= o.y; }
+	void operator+=(const Vector2& o) { x += o.x; y += o.y; }
+	void operator-=(const Vector2& o) { x -= o.x; y -= o.y; }
 	Vector2 operator*(float factor) const { return Vector2(x * factor, y * factor); }
 	float operator*(const Vector2& o) const { return x * o.x + y * o.y; }
 	

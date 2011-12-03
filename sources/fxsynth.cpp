@@ -65,6 +65,8 @@ void FxSynth::render(float* pBuffer, int numSamples)
 					sample = ((1 - m_osciPhase) / (1 - code.duty)) * 2 - 1;
 				}
 				break;
+			case EndOfCode:
+				break;
 			}
 			
 			m_osciPhase += code.osciInc;

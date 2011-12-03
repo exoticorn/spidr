@@ -73,7 +73,7 @@ void print(const Vector2& position, const char* pFormat, ...)
 	const char* pText = buffer;
 	while(*pText)
 	{
-		for(int i = 0; i < sizeof(fontMapping) / sizeof(fontMapping[0]); i++)
+		for(int i = 0; i < (int)(sizeof(fontMapping) / sizeof(fontMapping[0])); i++)
 		{
 			if(fontMapping[i].c == *pText)
 			{
@@ -82,7 +82,7 @@ void print(const Vector2& position, const char* pFormat, ...)
 			}
 		}
 		glTranslatef(1, 0, 0);
-		*pText++;
+		pText++;
 	}
 	glPopMatrix();
 }
@@ -248,6 +248,8 @@ int main(int argc, char *argv[])
 					{
 						pause = !pause;
 					}
+					break;
+				default:
 					break;
 				}
 				break;

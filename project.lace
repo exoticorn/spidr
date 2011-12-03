@@ -1,6 +1,7 @@
 @project.name = 'spidr'
 
-module_search_path '../modules'
+module_search_path 'modules'
+module_search_path 'modules/game-base'
 
 import 'compiler'
 import 'sdl'

@@ -2,6 +2,8 @@
 
 $hatching = 0.06
 
+$: << File.dirname(__FILE__)
+
 require 'svg_converter_base'
 
 infile = ARGV.shift

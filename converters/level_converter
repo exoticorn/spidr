@@ -2,6 +2,8 @@
 
 $hatching = 0.08
 
+$: << File.dirname(__FILE__)
+
 require 'svg_converter_base'
 
 def convert_level(file, filename, index)
@@ -60,7 +62,7 @@ File.open(outname, 'w') do |file|
 	file.puts '#include "collision.hpp"'
 	levels = []
 	innames.each do |filename|
-		unless filename =~ /^level(\d+)\.svg$/
+		unless filename =~ /^assets\/level(\d+)\.svg$/
 			printf "bad level filename: %s\n", filename
 			exit 1
 		end
